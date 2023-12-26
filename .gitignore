@@ -1,0 +1,4 @@
+venv
+.vscode
+*.gguf
+models/*.gguf
