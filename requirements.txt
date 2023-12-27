@@ -2,5 +2,6 @@ llm==0.12
 llm-gpt4all==0.2
 llm-llama-cpp==0.3
 llm-mistral==0.2
+llm-python==0.1
 strip-tags==0.5.1
 guardrails-ai==0.3.2
