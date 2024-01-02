@@ -23,16 +23,16 @@ explain-gist-code:
 
 add-mistral-7b:
 	curl -LO 'https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/resolve/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf?download=true'
-	llm llama-cpp add-model mistral-7b-instruct-v0.1.Q4_K_M.gguf
+	llm llama-cpp add-model ./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf
 
-make-local-mistral-nfl:
+prompt-local-mistral-nfl:
 	llm -m gguf \
-	-o path mistral-7b-instruct-v0.1.Q4_K_M.gguf \
+	-o path ./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf \
 	'[INST] Write a .json of all 30 football teams including an index for each, team name, city, league (NFC v. AFC), and division.[/INST]'
 
-make-local-mistral-mlb:
+prompt-local-mistral-mlb:
 	llm -m gguf \
-	-o path mistral-7b-instruct-v0.1.Q4_K_M.gguf \
+	-o path ./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf \
 	'[INST] Write a .json of all 30 baseball teams including an index for each, team name, city, league (American vs National), and division.[/INST]'
 
 news-headlines:
